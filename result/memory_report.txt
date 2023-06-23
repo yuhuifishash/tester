@@ -1,0 +1,69 @@
+Memory Test Result:
+              total        used        free      shared  buff/cache   available
+Mem:      197401664     1603140   191295184        3808     4503340   194643476
+Swap:       8388604           0     8388604
+
+              total        used        free      shared  buff/cache   available
+Mem:      197401664     1603140   191295184        3808     4503340   194643476
+Swap:       8388604           0     8388604
+MemTotal:       197401664 kB
+MemFree:        191295184 kB
+MemAvailable:   194643476 kB
+Buffers:         1177616 kB
+Cached:          2912128 kB
+SwapCached:            0 kB
+Active:          2230624 kB
+Inactive:        2101172 kB
+Active(anon):     251788 kB
+Inactive(anon):      560 kB
+Active(file):    1978836 kB
+Inactive(file):  2100612 kB
+Unevictable:       16812 kB
+Mlocked:           16812 kB
+SwapTotal:       8388604 kB
+SwapFree:        8388604 kB
+Dirty:               448 kB
+Writeback:             0 kB
+AnonPages:        259232 kB
+Mapped:           135112 kB
+Shmem:              3808 kB
+KReclaimable:     413596 kB
+Slab:             991808 kB
+SReclaimable:     413596 kB
+SUnreclaim:       578212 kB
+KernelStack:       20368 kB
+PageTables:         6120 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    107089436 kB
+Committed_AS:    1625360 kB
+VmallocTotal:   135290159040 kB
+VmallocUsed:      252656 kB
+VmallocChunk:          0 kB
+Percpu:           132864 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:          32768 kB
+CmaFree:              28 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+
+base Score: 40/40.0
+Write access latency: 536 milliseconds
+Read access latency: 357 milliseconds
+accessLatency Score: 15/20.0
+Memory Bandwidth: 258 GB/s
+bandWidth Score: 17.5/20.0
+Throughput: 10.2 GB/s
+Throughput Score: 16/20.0
+Memory Score: 88.5/100.0
+Rank of Memory: A

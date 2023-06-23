@@ -1,0 +1,113 @@
+CPU performance report
+------------------------
+1.CPU information
+Architecture:                    aarch64
+CPU op-mode(s):                  64-bit
+Byte Order:                      Little Endian
+CPU(s):                          96
+On-line CPU(s) list:             0-95
+Thread(s) per core:              1
+Core(s) per socket:              48
+Socket(s):                       2
+NUMA node(s):                    4
+Vendor ID:                       0x48
+Model:                           0
+Stepping:                        0x1
+CPU max MHz:                     2600.0000
+CPU min MHz:                     200.0000
+BogoMIPS:                        200.00
+L1d cache:                       6 MiB
+L1i cache:                       6 MiB
+L2 cache:                        48 MiB
+L3 cache:                        96 MiB
+NUMA node0 CPU(s):               0-23
+NUMA node1 CPU(s):               24-47
+NUMA node2 CPU(s):               48-71
+NUMA node3 CPU(s):               72-95
+Vulnerability Itlb multihit:     Not affected
+Vulnerability L1tf:              Not affected
+Vulnerability Mds:               Not affected
+Vulnerability Meltdown:          Not affected
+Vulnerability Spec store bypass: Not affected
+Vulnerability Spectre v1:        Mitigation; __user pointer sanitization
+Vulnerability Spectre v2:        Not affected
+Vulnerability Srbds:             Not affected
+Vulnerability Tsx async abort:   Not affected
+Flags:                           fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma dcpop asimddp asimdfhm
+
+2. Mandelbrot test
+	Problem scale:MAX_ITER 1000,HEIGHT 600,WIDTH 800
+	One thread elapsed time:5877383930.000 ns,
+	Elapsed time(ns)/(MAX_ITER*HEIGHT*WIDTH)=12.245
+
+	Performance on multithreads:
+	---------------------------------------------------------------
+	Thread num |   elaps time(ns) | elaps time(ns)/(MAX_ITER*HEIGHT*WIDTH) | accelerate rate
+	      2    |   2965331820.000 |               6.178                    |   1.982
+	      4    |   2863050330.000 |               5.965                    |   2.053
+	      8    |   1967997270.000 |               4.100                    |   2.986
+	     16    |   1152660910.000 |               2.401                    |   5.099
+	     32    |    596984470.000 |               1.244                    |   9.845
+	     64    |    315312490.000 |               0.657                    |  18.640
+	    128    |    196478740.000 |               0.409                    |  29.914
+	    256    |    123701370.000 |               0.258                    |  47.513
+
+	Single thread score:84.53
+		Rank(S/A/B/C/D):A
+
+	Multi thread accelerate score:90.73
+		Rank(S/A/B/C/D):S
+
+3.Common Arithmetic test
+	Matrix Multiplication(512x512 512x512):
+	elapsed time(s):2.441
+	Score:77.888
+	Rank(S/A/B/C/D):B
+
+	Two-dimensional Convolution(1024x1024 Core:5x5):
+	elapsed time(s):0.277
+	Score:82.101
+	Rank(S/A/B/C/D):A
+
+	Simpson Integral(partition 1e7):
+	elapsed time(s):1.444
+	Score:93.441
+	Rank(S/A/B/C/D):S
+
+	FFT(262144): 
+	elapsed time(s):0.721
+	Score:74.622
+	Rank(S/A/B/C/D):B
+
+
+4.Instruction test
+	Instruction repeat time:1000000
+	Instruction average elapsed time:
+	---------------------------------
+	Instruction  |  Mean elapsed time(ns)
+	        ADD  |  2.967
+	        SUB  |  2.938
+	        MUL  |  2.823
+	       SDIV  |  2.810
+	       UDIV  |  2.822
+	       FABS  |  2.729
+	       FNEG  |  2.737
+	      FSQRT  |  6.544
+	       FADD  |  2.739
+	       FSUB  |  2.739
+	       FDIV  |  2.733
+	       FMUL  |  2.730
+	      FNMUL  |  2.745
+	      FMADD  |  2.730
+	      FMSUB  |  2.732
+	  FABS_SIMD  |  2.730
+	  FNEG_SIMD  |  2.738
+	 FSQRT_SIMD  |  9.255
+	  FADD_SIMD  |  2.739
+	  FSUB_SIMD  |  2.744
+	  FDIV_SIMD  |  4.636
+	  FMUL_SIMD  |  2.730
+
+	Instruction score:89.85
+		Rank(S/A/B/C/D):A
+

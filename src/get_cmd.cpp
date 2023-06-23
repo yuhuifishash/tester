@@ -33,3 +33,7 @@ int ExecuteCMD(const char *cmd, char *result)
 
     return iRet;
 }
+void getCPUinformation(char* info)
+{
+    ExecuteCMD("lscpu",info);
+}

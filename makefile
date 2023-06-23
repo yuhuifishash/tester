@@ -1,4 +1,4 @@
-CC=g++ -std=c++11 -g -Wall
+CC=g++ -std=c++11 -g -Wall -fopenmp
 CFLAGS = -I./include
 #需要链接的库
 LFLAGS = 
